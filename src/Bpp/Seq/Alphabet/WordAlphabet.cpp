@@ -328,7 +328,7 @@ std::string WordAlphabet::getWord(const std::vector<string>& vpos, size_t pos) c
 
 Sequence* WordAlphabet::translate(const Sequence& sequence, size_t pos) const
 {
-  if ((!hasUniqueAlphabet()) or
+  if ((!hasUniqueAlphabet()) ||
       (sequence.getAlphabet()->getAlphabetType() != vAbsAlph_[0]->getAlphabetType()))
     throw AlphabetMismatchException("No matching alphabets", sequence.getAlphabet(), vAbsAlph_[0]);
 
@@ -351,7 +351,7 @@ Sequence* WordAlphabet::translate(const Sequence& sequence, size_t pos) const
 
 Sequence* WordAlphabet::reverse(const Sequence& sequence) const
 {
-  if ((!hasUniqueAlphabet()) or
+  if ((!hasUniqueAlphabet()) ||
       (sequence.getAlphabet()->getAlphabetType() != getAlphabetType()))
     throw AlphabetMismatchException("No matching alphabets");
 

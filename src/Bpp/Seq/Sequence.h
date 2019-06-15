@@ -65,6 +65,7 @@ namespace bpp
  * @see Alphabet
  */
 class Sequence:
+  public virtual Clonable,
   public virtual CoreSequence,
   public virtual SymbolList
 {
@@ -165,6 +166,7 @@ class Sequence:
  * @see Alphabet
  */
 class BasicSequence :
+  public virtual Clonable,
   public virtual Sequence,
   public virtual AbstractCoreSequence,
   public virtual BasicSymbolList

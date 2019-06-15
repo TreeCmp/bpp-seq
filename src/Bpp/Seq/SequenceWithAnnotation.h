@@ -116,6 +116,7 @@ class SequenceAnnotation :
  * @see BasicSequence
  */
 class SequenceWithAnnotation :
+  public virtual Clonable,
   public Sequence,
   public EdSymbolList
 {
